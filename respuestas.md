@@ -1,3 +1,6 @@
+<style>
+* {text-align: justify!important;}
+</style>
 # Preguntas de materia certamen 2 IA
 
 ## Certamen 2011-1
@@ -73,3 +76,25 @@ Genotipo vendría a ser el conjunto de genes que componen la solución (la repre
 **Siempre que se aplica re-start en un algoritmo Hill-Climbing se está ayudando a explorar más**
 
 **Falso**, no siempre, se puede dar el caso (muy poco probable) donde se caiga en una región ya explorada por el algoritmo.
+
+## Certamen 2004-1
+
+### Verdadero y Falso (Son las respuestas de la pauta)
+
+**Las metaheurísticas  tratan de encontrar el mejor óptimo local**
+
+**Verdadero**, las metaheurísticas no pueden asegurar la obtención del óptimo global, sin embargo tratan de encontrar el Mejor óptimo local, que en el caso ideal corresponde al óptimo global
+
+**El cruzamiento en un punto no es útil para la resolución de problemas de optimización**
+
+**Falso**, cuando el problema no tiene restricciones es una buena Metaheurística.
+
+**La mutación en un algoritmo genético standard es un algoritmo de búsqueda local**
+
+Falso, la búsqueda local trata de optimizar la búsqueda en un vecindario, la mutación no tiene objetivo de optimización.
+
+### Preguntas
+
+**¿Qué alternativas tiene para manejar las restricciones en Simulated Annealing?. Ejemplifique**
+
+Función objetivo + Penalización (por restricciones insatisfechas), Movimiento (que el movimiento no permita soluciones infactibles), Representación (que la representación no permita soluciones infactible), Descarte posterior al movimiento previa condición de aceptación.
