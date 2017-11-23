@@ -46,59 +46,58 @@ Genotipo vendría a ser el conjunto de genes que componen la solución (la repre
 ### Verdadero y Falso
 #### Las preguntas que no están acá es porque no recuerdo haberlas visto en clases ni las ppt.
 
-**A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa.**
+* **A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa.**  
+
+  **Falso**, el aumento de la temperatura permite que se acepten soluciones de peor calidad, lo que aumenta la exploración del algoritmo, pero como solo se genera un vecino a la vez, y de manera aleatoria, el algoritmo nunca va a cubrir todo el espacio de búsqueda (al menos para instancias grandes).
+
+  SA no realiza búsqueda completas [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
+
+* **El mecanismo que utiliza tabú search para escapar de óptimos locales es la lista tabú**
+
+  **Falso**, la lista tabú se utiliza para que no se formen ciclos en la búsqueda. Lo que hace tabú search para escapar de óptimos locales es permitir soluciones de peor calidad.
+
+* **Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
+
+  ###### No estoy seguro de esto
+  **Depende**, si el algoritmo utilizado permite moverse por el espacio de soluciones infactibles si es buena idea penalizar estas en la función objetivo. Si el algoritmo se mueve por el espacio de restricciones factibles, es mejor utilizar una representación y/o movimientos que no acepten soluciones que rompan las restricciones duras (o simplemente descartar las que no cumplan).
+
+  **Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
 
-**Falso**, el aumento de la temperatura permite que se acepten soluciones de peor calidad, lo que aumenta la exploración del algoritmo, pero como solo se genera un vecino a la vez, y de manera aleatoria, el algoritmo nunca va a cubrir todo el espacio de búsqueda (al menos para instancias grandes).
+* **Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
 
-SA no realiza búsqueda completas [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
+  **Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
-**El mecanismo que utiliza tabú search para escapar de óptimos locales es la lista tabú**
+* **Los operadores de tipo cruzamiento exploran**
 
-**Falso**, la lista tabú se utiliza para que no se formen ciclos en la búsqueda. Lo que hace tabú search para escapar de óptimos locales es permitir soluciones de peor calidad.
+  **Falso**, generalmente los operadores de cruzamiento **explotan**, debido a que utilizan información conocida para obtener a los nuevos individuos (estructura).
 
-**Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
+  **Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
-###### No estoy seguro de esto
-**Depende**, si el algoritmo utilizado permite moverse por el espacio de soluciones infactibles si es buena idea penalizar estas en la función objetivo. Si el algoritmo se mueve por el espacio de restricciones factibles, es mejor utilizar una representación y/o movimientos que no acepten soluciones que rompan las restricciones duras (o simplemente descartar las que no cumplan).
-
-**Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
+* **La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros**
 
 
-**Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
+  **Falso**, es para lograr un mejor control de parámetros
 
-**Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
+* **Siempre que se aplica re-start en un algoritmo Hill-Climbing se está ayudando a explorar más**
 
-**Los operadores de tipo cruzamiento exploran**
-
-**Falso**, generalmente los operadores de cruzamiento **explotan**, debido a que utilizan información conocida para obtener a los nuevos individuos (estructura).
-
-**Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
-
-**La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros**
-
-###### No estoy seguro :(
-**Falso**, es para lograr un mejor control de parámetros
-
-**Siempre que se aplica re-start en un algoritmo Hill-Climbing se está ayudando a explorar más**
-
-**Falso**, no siempre, se puede dar el caso (muy poco probable) donde se caiga en una región ya explorada por el algoritmo.
+  **Falso**, no siempre, se puede dar el caso (muy poco probable) donde se caiga en una región ya explorada por el algoritmo.
 
 ## Certamen 2004-1
 
 ### Verdadero y Falso (Son las respuestas de la pauta)
 
-**Las metaheurísticas  tratan de encontrar el mejor óptimo local**
+* **Las metaheurísticas  tratan de encontrar el mejor óptimo local**
 
-**Verdadero**, las metaheurísticas no pueden asegurar la obtención del óptimo global, sin embargo tratan de encontrar el Mejor óptimo local, que en el caso ideal corresponde al óptimo global
+  **Verdadero**, las metaheurísticas no pueden asegurar la obtención del óptimo global, sin embargo tratan de encontrar el Mejor óptimo local, que en el caso ideal corresponde al óptimo global
 
-**El cruzamiento en un punto no es útil para la resolución de problemas de optimización**
+* **El cruzamiento en un punto no es útil para la resolución de problemas de optimización**
 
-**Falso**, cuando el problema no tiene restricciones es una buena Metaheurística.
+  **Falso**, cuando el problema no tiene restricciones es una buena Metaheurística.
 
-**La mutación en un algoritmo genético standard es un algoritmo de búsqueda local**
+* **La mutación en un algoritmo genético standard es un algoritmo de búsqueda local**
 
-Falso, la búsqueda local trata de optimizar la búsqueda en un vecindario, la mutación no tiene objetivo de optimización.
+  Falso, la búsqueda local trata de optimizar la búsqueda en un vecindario, la mutación no tiene objetivo de optimización.
 
 ### Preguntas (respuestas de la pauta)
 
@@ -116,33 +115,33 @@ Función objetivo + Penalización (por restricciones insatisfechas), Movimiento 
 
 ### Verdadero y Falso
 
-**A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa**
+* **A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa**
 
-**Falso**, SA no realiza búsquedas completas
+  **Falso**, SA no realiza búsquedas completas
 
-**El mecanismo que usa Tabu Search para escapar de óptimos locales es la lista tabú.**
+* **El mecanismo que usa Tabu Search para escapar de óptimos locales es la lista tabú.**
 
-**Falso**, lista tabú impide los ciclo, aceptar soluciones diferentes (de peor calidad) impide el estancamiento en un óptimo local.
+  **Falso**, lista tabú impide los ciclo, aceptar soluciones diferentes (de peor calidad) impide el estancamiento en un óptimo local.
 
-**Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
+* **Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
 
-**Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación.
+  **Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación.
 
-**Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
+* **Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
 
-**Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo.
+  **Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo.
 
-**Los operadores tipo cruzamiento exploran.**
+* **Los operadores tipo cruzamiento exploran.**
 
-**Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP.
+  **Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP.
 
-**La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros.**
+* **La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros.**
 
-**Falso**, eso es para el control de parámetros, no sintonización.
+  **Falso**, eso es para el control de parámetros, no sintonización.
 
-**Siempre que se aplica re-start en un algoritmo hill-climbing se está ayudando a explorar más.**
+* **Siempre que se aplica re-start en un algoritmo hill-climbing se está ayudando a explorar más.**
 
-**Falso**, si el punto de partida es el mismo, por ejemplo usando un algoritmo greedy se volverá a realizar el mismo proceso.
+  **Falso**, si el punto de partida es el mismo, por ejemplo usando un algoritmo greedy se volverá a realizar el mismo proceso.
 
 ### Preguntas
 
