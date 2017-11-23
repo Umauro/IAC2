@@ -39,3 +39,37 @@ Permiten encontrar una solución de buena calidad (no asegura la óptima) en un 
 Genotipo vendría a ser el conjunto de genes que componen la solución (la representación de esta), el fenotipo es la expresión del genotipo, el cual corresponde al valor de la función de evaluación/aptitud para el genotipo de la solución.
 
 ## Certamen 2008-1
+
+### Verdadero y Falso
+#### Las preguntas que no están acá es porque no recuerdo haberlas visto en clases ni las ppt.
+
+**A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa.**
+
+###### No estoy seguro de esto
+**Falso**, el aumento de la temperatura permite que se acepten soluciones de peor calidad, lo que aumenta la exploración del algoritmo, pero como solo se genera un vecino a la vez, y de manera aleatoria, el algoritmo nunca va a cubrir todo el espacio de búsqueda (al menos para instancias grandes).
+
+**El mecanismo que utiliza tabú search para escapar de óptimos locales es la lista tabú**
+
+**Falso**, la lista tabú se utiliza para que no se formen ciclos en la búsqueda. Lo que hace tabú search para escapar de óptimos locales es permitir soluciones de peor calidad.
+
+**Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
+
+###### No estoy seguro de esto
+**Depende**, si el algoritmo utilizado permite moverse por el espacio de soluciones infactibles si es buena idea penalizar estas en la función objetivo. Si el algoritmo se mueve por el espacio de restricciones factibles, es mejor utilizar una representación y/o movimientos que no acepten soluciones que rompan las restricciones duras (o simplemente descartar las que no cumplan).
+
+**Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
+
+###### No tengo idea sobre esto, completenlo ustedes c:
+
+**Los operadores de tipo cruzamiento exploran**
+
+**Falso**, generalmente los operadores de cruzamiento **explotan**, debido a que utilizan información conocida para obtener a los nuevos individuos (estructura).
+
+**La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros**
+
+###### No estoy seguro :(
+**Falso**, es para lograr un mejor control de parámetros
+
+**Siempre que se aplica re-start en un algoritmo Hill-Climbing se está ayudando a explorar más**
+
+**Falso**, no siempre, se puede dar el caso (muy poco probable) donde se caiga en una región ya explorada por el algoritmo.
