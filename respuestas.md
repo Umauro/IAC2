@@ -62,13 +62,18 @@ SA no realiza búsqueda completas [respuesta 2003-1](#certamen-2003-1-respuestas
 ###### No estoy seguro de esto
 **Depende**, si el algoritmo utilizado permite moverse por el espacio de soluciones infactibles si es buena idea penalizar estas en la función objetivo. Si el algoritmo se mueve por el espacio de restricciones factibles, es mejor utilizar una representación y/o movimientos que no acepten soluciones que rompan las restricciones duras (o simplemente descartar las que no cumplan).
 
+**Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
+
+
 **Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
 
-###### No tengo idea sobre esto, completenlo ustedes c:
+**Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
 **Los operadores de tipo cruzamiento exploran**
 
 **Falso**, generalmente los operadores de cruzamiento **explotan**, debido a que utilizan información conocida para obtener a los nuevos individuos (estructura).
+
+**Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP. [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
 **La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros**
 
@@ -114,3 +119,41 @@ Función objetivo + Penalización (por restricciones insatisfechas), Movimiento 
 **A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa**
 
 **Falso**, SA no realiza búsquedas completas
+
+**El mecanismo que usa Tabu Search para escapar de óptimos locales es la lista tabú.**
+
+**Falso**, lista tabú impide los ciclo, aceptar soluciones diferentes (de peor calidad) impide el estancamiento en un óptimo local.
+
+**Conviene penalizar la función objetivo cuando se desea manejar las restricciones duras**
+
+**Falso**, Si son duras lo más conveniente es manejarlas con los operadores y la representación.
+
+**Un algoritmo genético es ciego respecto al fenómeno de epistásis.**
+
+**Verdadero**, porque el algoritmo no toma en cuenta las restricciones cuando busca el óptimo.
+
+**Los operadores tipo cruzamiento exploran.**
+
+**Verdadero o Falso**, dependiendo de la forma en que se deﬁne el operador tipo cruzamiento, este podría explorar como es el caso al usar la lista de referencia en TSP.
+
+**La estrategia de monitorear en un algoritmo evolucionista es para lograr una mejor sintonización de los parámetros.**
+
+**Falso**, eso es para el control de parámetros, no sintonización.
+
+**Siempre que se aplica re-start en un algoritmo hill-climbing se está ayudando a explorar más.**
+
+**Falso**, si el punto de partida es el mismo, por ejemplo usando un algoritmo greedy se volverá a realizar el mismo proceso.
+
+### Preguntas
+
+**Dada la representación por lista de referencia para el problema del vendedor viajero, considere 6 ciudades y responda.**
+
+- **¿Esta representación es adecuada para una algoritmo de tipo Simulated Annealing?**  
+Es adecuada siempre y cuando el movimiento que se deﬁne maneje la representación y la factibilidad. Sin embargo, no es adecuada si se piensa en el costo en codiﬁcar y decodiﬁcar la solución para realizar su evaluación
+
+- **Se define el cruzamiento en dos puntos como:**
+  - **Seleccionar aleatoriamente 2 puntos de corte**
+  - **Intercambiar la parte central de los dos padres**  
+
+  **Cree Ud. que este operador realiza una mejor explotación que el corte en un solo punto con esta representación para el TSP?, Compare**  
+  Independiente del número de cortes, este operador usando la representación por lista de referencia sólo explora con respecto al problema.
