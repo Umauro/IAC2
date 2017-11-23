@@ -1,8 +1,42 @@
-<style>
-* {text-align: justify!important;}
-</style>
 # Preguntas de materia certamen 2 IA
 
+## Certamen 2013-1 (respuestas de la pauta)
+### Verdadero Y Falso
+
+- **El movimiento genera el vecindario de soluciones factibles en algoritmos de búsqueda local**
+
+  **Falso**, el movimiento genera el vecindario, el cual puede estar formado por cadidatas a solución factibles e infactibles.
+
+- **Al usar la lista de referencia en el algoritmo genético para el TSP se logró reducir la epistásis**
+
+  **Falso**, la epiptásis es una característica del problema relacionado con las restricciones. Al usar lista de referencia se pudo usar el cruzamiento standard (cruzamiento en un punto) obteniendo siempre candidatas a solución factibles. Se logró manejar la epiptásis, no reducirla.
+
+- **Hill Climbing posee un paralelismo implícito cuando realiza varios re-starts**
+
+  **Falso**, el paralelismo implícito implica realizar una búsqueda simultánea por el espacio de búsqueda y no secuencial como lo hace Hill Climbing aún con varios re-start.
+
+- **La opción para manejar las restricciones en Simulated Annealing es usar una función  de evaluación que incluya penalizaciones**
+
+  **Verdadero|Falso**, esa es una de varias opciones. También se puede hacer en el movimiento y la representación.     
+
+- **Al hacer re-start se mantienen los elementos en la lista tabú de la solución anterior en tabú search**
+
+  **Falso**, los elementos de la lista tabú están asociados a la solución inicial usada. El mantenerla no tiene sentido porque impediría realizar movimientos beneficiosos para la solución actual.
+
+- **Solo Tabú Search y Hill Climbing pueden usar las estrategias mejor-mejora y alguna-mejora. En cambio Simulated Annealing sólo se basa en alguna-mejora**
+
+  **Falso**, Tabú Search se basa sólo en mejor-mejora. Simulated Annealing en su versión standard se basa en alguna-mejora, pero es posible aplicarlo usando de base mejor-mejora.
+
+### Argumente
+
+**¿Qué opina de un algoritmo basado en Simulated Annealing, para el problema de la mochila, que usa Swap como movimiento?.¿Sería eficiente o en ese caso es mejor usar Tabú Search**
+
+Es un movimiento ineficiente en este caso, tanto para SA como para TS, ya que buscará soluciones solamente considerando el número de objetos que inicialmente está llevando la mochila y dejaría de buscar en otras partes del espacio de búsqueda.
+
+**¿Para qué sirve Monitorear?**
+
+Sirve para observar la búsqueda y permitir tomar decisiones respecto a acciones a realizar, como por ejemplo cambios en los valores de los parámetros para permitir una buena intensificación y diversificación de la búsqueda.
+  
 ## Certamen 2011-1
 
 **¿Cómo se podría variar el tamaño de la lista tabú para mejorar el proceso de búsqueda realizado por tabú search? Explique.**
