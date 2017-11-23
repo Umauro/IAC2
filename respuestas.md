@@ -48,8 +48,10 @@ Genotipo vendría a ser el conjunto de genes que componen la solución (la repre
 
 **A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa.**
 
-###### No estoy seguro de esto
+
 **Falso**, el aumento de la temperatura permite que se acepten soluciones de peor calidad, lo que aumenta la exploración del algoritmo, pero como solo se genera un vecino a la vez, y de manera aleatoria, el algoritmo nunca va a cubrir todo el espacio de búsqueda (al menos para instancias grandes).
+
+SA no realiza búsqueda completas [respuesta 2003-1](#certamen-2003-1-respuestas-de-la-pauta)
 
 **El mecanismo que utiliza tabú search para escapar de óptimos locales es la lista tabú**
 
@@ -93,8 +95,22 @@ Genotipo vendría a ser el conjunto de genes que componen la solución (la repre
 
 Falso, la búsqueda local trata de optimizar la búsqueda en un vecindario, la mutación no tiene objetivo de optimización.
 
-### Preguntas
+### Preguntas (respuestas de la pauta)
 
 **¿Qué alternativas tiene para manejar las restricciones en Simulated Annealing?. Ejemplifique**
 
 Función objetivo + Penalización (por restricciones insatisfechas), Movimiento (que el movimiento no permita soluciones infactibles), Representación (que la representación no permita soluciones infactible), Descarte posterior al movimiento previa condición de aceptación.
+
+**Compare Simulated Annealing con Tabu Search**
+
+* **Aspectos Comunes:** Búsqueda Local dentro de un vecindario, requieren una solución completa inicial.
+* **Diferencias:** Criterio de aceptación del movimento y forma de elegir soluciones candidatas. Simulated Annealing solo genera un vecino y tabu search genera un vecindario. SA acepta soluciones de peor calidad dependiendo de una probabilidad y tabú search siempre las acepta (si no están en la lista tabú).
+* **Mecanismo de exploración:** En SA la temperatura, en TS la forma de elegir el siguiente movimiento.
+
+## Certamen 2003-1 (respuestas de la pauta)
+
+### Verdadero y Falso
+
+**A medida que se aumenta la temperatura en Simulated Annealing el algoritmo comienza a hacer una búsqueda más completa**
+
+**Falso**, SA no realiza búsquedas completas
