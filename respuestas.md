@@ -37,6 +37,55 @@ Es un movimiento ineficiente en este caso, tanto para SA como para TS, ya que bu
 
 Sirve para observar la búsqueda y permitir tomar decisiones respecto a acciones a realizar, como por ejemplo cambios en los valores de los parámetros para permitir una buena intensificación y diversificación de la búsqueda.
 
+## Certamen 2012-1
+
+### Preguntas
+
+**k-tournament es un operador de selección que elige aleatoriamente k individuos de la población y selecciona como padre aquel de mejor calidad. ¿En qué caso la presión de selección es mayor, para k=2 ó para k=4?**
+
+Para k = 4, dado que todos tienen la misma probabilidad de ser elegidos para participar en el torneo, con un k mayor aumentan la probabilidad de que el mejor individuo sea seleccionado entre los k individuos, lo que haría que los peores individuos no sean seleccionado, es decir, se aumenta la presión de selección.
+
+**En Simulated Annealing cuando la temperatura es baja se tiende a diversificar más la búsqueda**
+
+Al contrario, al bajar la temperatura se tiende a intensificar la búsqueda, puesto que baja la probabilidad de aceptar una solución de peor calidad, lo que concentra la búsqueda en una región del espacio de búsqueda.
+
+**Los operadores de transformación de un algoritmo genético estándar pueden ser fácilmente adaptados para resolver problemas con pocas restricciones**
+
+No necesariamente, dependiendo del problema y la representación puede ser muy difícil adaptar los operadores de transformación de AGE. Por ejemplo, para un TSP con representación de lista con tour de ciudades, no se puede utilizar el cruzamiento en un punto porque produciría soluciones infactibles. Se puede cambiar la representación a una lista de referencia, pero se perdería información (cruzamiento diversificaría), por lo que se debería modificar el operador de cruzamiento para intensificar.
+
+**Los algoritmos Greedy utilizan la función Miope para seleccionar vecinos de mejor calidad**
+
+No, la función miope se utilizan para construir soluciones donde se toman decisiones localmente óptimas, en base a la calidad. Cuando uno habla de vecinos es porque está considerando soluciones completas.
+
+**Es posible utilizar un método de sintonización para cambiar el largo de la lista durante la búsqueda de Tabú Search**
+
+Sintonización de parámetros busca encontrar el mejor valor para un parámetro que se mantendrá fijo durante la búsqueda. Para cambiar un parámetro durante la ejecución del algoritmo se debe utilizar control de parámetros, en este caso un control adaptativo.
+
+**Hill Climbing con alguna-mejora es más eficiente que Hill Climbing con mejor mejora, pero no asegura encontrar el óptimo global.**
+
+Como ambas técnicas son de búsqueda local ninguna asegura encontrar el óptimo global. Por un lado, HC con alguna-mejora puede ser más eficiente siempre y cuando no se esté en el óptimo local, pues en dicho caso ambos algoritmos funcionan de la misma manera.
+
+**Un buen operador de mutación siempre produce un hijo de mejor calidad que el padre.**
+
+El operador de mutación no tiene nada que ver con los padres del individuo, si no con una modificación al mismo individuo. Por otro lado, no se puede asegurar que el aplicar un operador de mutación mejore la aptitud del individuo.
+
+**En Tabú Search siempre se deben almacenar las soluciones visitadas completas pues es la única forma de asegurar que no se visiten otra vez**
+
+No, en la práctica se almacena una codificación que permina no caer en una solución ya visitada, para así mejorar la eficiencia de la solución. Por ejemplo, en el problema de la mochila utilizando Bit-Flip como movimiento, se puede guardar en la cola el bit donde se realizó el flip. De esta manera no se vuelve a caer en la solución anterior y no es necesario guardar la solución completa.
+
+**El operador de elitísmo en algoritmos genéticos permite guardar el mejor óptimo encontrado en la búsqueda para entregarlo como resultado al final del proceso.**
+
+###### No estoy seguro de esto.
+El objetivo del operador de elitísmo es pasar a la siguiente generación el mejor individuo de la generación actual. Por lo que si permitiría guardar el mejor óptimo de la búsqueda y entregarlo como resultado.
+
+**Trabajar con una población de gran tamaño asegura encontrar soluciones de buena calidad en un algoritmo genético**
+
+No lo asegura, el hecho de tener un gran tamaño de población favorece la diversificación, por lo que es probable de que el algoritmo no explote de buena manera el espacio de búsqueda y no pueda llegar a buenas soluciones.
+
+
+
+
+
 ## Certamen 2011-1
 
 **¿Cómo se podría variar el tamaño de la lista tabú para mejorar el proceso de búsqueda realizado por tabú search? Explique.**
