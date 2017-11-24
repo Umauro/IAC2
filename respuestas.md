@@ -36,7 +36,7 @@ Es un movimiento ineficiente en este caso, tanto para SA como para TS, ya que bu
 **¿Para qué sirve Monitorear?**
 
 Sirve para observar la búsqueda y permitir tomar decisiones respecto a acciones a realizar, como por ejemplo cambios en los valores de los parámetros para permitir una buena intensificación y diversificación de la búsqueda.
-  
+
 ## Certamen 2011-1
 
 **¿Cómo se podría variar el tamaño de la lista tabú para mejorar el proceso de búsqueda realizado por tabú search? Explique.**
@@ -190,3 +190,15 @@ Es adecuada siempre y cuando el movimiento que se deﬁne maneje la representaci
 
   **Cree Ud. que este operador realiza una mejor explotación que el corte en un solo punto con esta representación para el TSP?, Compare**  
   Independiente del número de cortes, este operador usando la representación por lista de referencia sólo explora con respecto al problema.
+
+**¿En qué se parecen Simulated Annealing con Tabú Search?**
+
+Ambos aceptan soluciones peores a la actual para lograr explorar y salir de óptimos locales, ocupando diferentes métodos cada uno, exploran más al inicio y finalizan con una mayor explotación.
+
+**¿Qué se entiende por Computación Evolutiva?**
+
+Son los algoritmos que se basan en la teoría de la evolución, donde el más apto es el que sobrevive y tiene más posibilidades de tener descendencia. Esto es usado para resolver problemas, teniendo poblaciones de individuos donde la función de evaluación determina qué tan apto es el individuo para el caso.
+
+**Defina control de parámetros adaptativo y determinístico**
+
+El control de parámetros adaptativo va ajustando los parámetros del algoritmo en base a la retroalimentación del comportamiento que este tenga. El control de parámetros determinístico cambia los valores de los parámetros según una función preestablecida al comienzo de la ejecución de este, independientemente del estado del algoritmo en cada momento.  
