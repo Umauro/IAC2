@@ -5,7 +5,7 @@
 
 - **El movimiento genera el vecindario de soluciones factibles en algoritmos de búsqueda local**
 
-  **Falso**, el movimiento genera el vecindario, el cual puede estar formado por cadidatas a solución factibles e infactibles.
+  **Falso**, el movimiento genera el vecindario, el cual puede estar formado por candidatas a solución factibles e infactibles.
 
 - **Al usar la lista de referencia en el algoritmo genético para el TSP se logró reducir la epistásis**
 
