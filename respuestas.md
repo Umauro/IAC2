@@ -124,6 +124,40 @@ Permiten encontrar una solución de buena calidad (no asegura la óptima) en un 
 
 Genotipo vendría a ser el conjunto de genes que componen la solución (la representación de esta), el fenotipo es la expresión del genotipo, el cual corresponde al valor de la función de evaluación/aptitud para el genotipo de la solución.
 
+## Certamen 2010-1 (respuestas de la pauta)
+
+### Preguntas
+
+**¿Cómo se realiza exploración en un algoritmo Hill-Climbing?**
+
+HC no realiza exploración. HC + re-start realiza exploración en cada re-start cuando se genera una nueva solución inicial aleatoria.
+
+**¿Cuál es la mejor combinación entre exploración y explotación?. Explique**
+
+Siempre es bueno comenzar explorando para encontrar zonas atractivas que explotar en el espacio de búsqueda.
+
+**¿Qué ventaja(s) poseen las técnicas de búsqueda completas comparadas con las técnicas incompletas?**
+
+* Las técnicas de búsqueda completas son capaces de encontrar el óptimo global y/o determinar que el problema no tiene solución. Una técnica incompleta sólo es capaz de encontrar óptimos locales.
+
+* Las técnicas de búsqueda completa son métodos deterministas, es decir, en todas las ejecuciones entregan el mismo resultado. Las técnicas de búsqueda incompletas son métodos estocásticos, por lo tanto, en cada ejecución entregan resultados diferentes.
+
+**¿Qué se entiende por presión de selección?. ¿Cómo se relaciona con el proceso de exploración/explotación en un algoritmo genético?**
+
+La presión de selección se entiende como la tendencia a considerar o no la calidad de los individuos en el proceso de selección en un algoritmo evolutivo. Se dice que la presión de selección es alta cuando la calidad de los individuos es importante al momento de seleccionar los individuos, esto favorece la explotación en el algoritmo. Se dice que la presión de selección es baja cuando la selección de individuos se realiza casi de forma indiferente con respecto a su calidad, esto favorece la exploración en el algoritmo.
+
+**¿Cómo se promueve la explotación en un algoritmo Simulated Annealing?. ¿Cómo se promueve la exploración en un algoritmo Simulated Annealing?**
+
+En el algoritmo Simulated Annealing se controla el balance entre explotación y exploración a traves de la temperatura. Una alta temperatura permite aceptar más movimientos que empeoran la calidad de la solución, por lo tanto favorece la exploración en el algoritmo. Por otro lado, cuando la temperatura es baja, pocos movimientos que empeoran la calidad de la solución serán aceptados, por lo tanto se favorece el proceso de explotación.
+
+**¿Cómo podría variar el tamaño de la población en un algoritmo genético de forma de promover la debida exporación/explotación de la búsqueda?. Justiﬁque.**
+
+Una población de gran tamaño favorece el proceso de exploración y una población pequeña favorece el proceso de explotación, por lo tanto, sería sensato comenzar con una población grande e ir reduciendo el tamaño a medida que avanza la búsqueda.
+
+**¿Por qué no es recomendable seleccionar exclusivamente los mejores individuos en el proceso de selección de un algoritmo genético?**
+
+ Esto implicaría una altísima presión se selección que llevaría a una convergencia prematura del algoritmo.
+
 ## Certamen 2008-1
 
 ### Verdadero y Falso
